@@ -1,29 +1,73 @@
-
-/* Commentaire du code ignoré avec slash etoile */
-
-
-
-/* Sélecteur d'élément */
-h1 {
-    color: red;  /* mettre le niveau de titre 1 en rouge*/
-    font-size: 60px;
-    text-align: center;
-  
+/* Style de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Sélecteur de classe */
-.important {
-    font-weight: bold;  /*met en gras*/
-}
-
-/* Sélecteur d'ID */
-#citation {
+/* Mise en page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
-    color: grey;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 
-p {
-    background-color: #FBF8F6;
+/* En-tête */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
 
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
 }

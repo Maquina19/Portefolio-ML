@@ -45,7 +45,10 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+    border: 2px solid #B0B0B0; /* Bordure gris clair */
 }
+
+
 
 section h2 {
     font-size: 2rem;

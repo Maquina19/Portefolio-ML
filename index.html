@@ -1,108 +1,73 @@
-/* Reset des styles par défaut */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lopes Matheo">
+    <title>Portfolio - Lopes Matheo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#about" class="nav-link">À propos</a>
+            <a href="#competences" class="nav-link">Compétences</a>
+            <a href="#projets" class="nav-link">Projets</a>
+            <a href="#parcours" class="nav-link">Parcours</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
 
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-}
+    <!-- Section d'accueil -->
+    <header id="accueil">
+        <div class="container">
+            <h1>Lopes Matheo</h1>
+            <p>Étudiant en Licence de Commercialisation des Produits et Services Sportifs</p>
+        </div>
+    </header>
 
-/* Container principal */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+    <!-- Section À propos -->
+    <section id="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>Actuellement en troisième année de Licence en Commercialisation des Produits et Services Sportifs à l'ILEPS de Cergy-Pontoise, je suis passionné par le sport, la culture portugaise et le marketing sportif. Mon objectif est de développer des stratégies commerciales efficaces dans l’industrie du sport et de contribuer à la croissance des entreprises dans ce secteur.</p>
+        </div>
+    </section>
 
-/* Navigation */
-nav {
-    background-color: #4CAF50;
-    padding: 10px 0;
-}
+    <!-- Section Compétences -->
+    <section id="competences">
+        <div class="container">
+            <h2>Compétences</h2>
+            <ul>
+                <li><strong>Langues :</strong> Français (natif), Portugais (courant), Espagnol (intermédiaire), Anglais (intermédiaire)</li>
+                <li><strong>Compétences bureautiques :</strong> Maîtrise de Word, Excel, PowerPoint, Google Drive</li>
+                <li><strong>Commercialisation et marketing :</strong> Stratégie marketing, gestion de la relation client, analyse de marché</li>
+                <li><strong>Vente :</strong> Conseiller de vente, gestion des stocks, animation commerciale</li>
+            </ul>
+        </div>
+    </section>
 
-nav .container {
-    display: flex;
-    justify-content: center;
-}
+    <!-- Section Projets -->
+    <section id="projets">
+        <div class="container">
+            <h2>Projets</h2>
+            <div class="project">
+                <h3>Campagne marketing pour un produit sportif</h3>
+                <p>Analyse du marché, création de supports publicitaires et développement d'une stratégie de communication efficace pour un produit sportif ciblé.</p>
+            </div>
+            <div class="project">
+                <h3>Organisation d'un événement sportif local</h3>
+                <p>Coordination des aspects logistiques et communication pour organiser un événement sportif destiné à un public local.</p>
+            </div>
+        </div>
+    </section>
 
-nav .nav-link {
-    margin: 0 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-nav .nav-link:hover {
-    text-decoration: underline;
-}
-
-/* Section d'accueil */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 60px 0;
-}
-
-header h1 {
-    font-size: 3rem;
-}
-
-header p {
-    font-size: 1.5rem;
-}
-
-/* Section À propos */
-section {
-    padding: 40px 0;
-    background-color: white;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-/* Section Projets */
-.project {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.project h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 1rem;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+    <!-- Section Parcours -->
+    <section id="parcours">
+        <div class="container">
+            <h2>Parcours Universitaire</h2>
+            <p><strong>Licence en Commercialisation des Produits et Services Sportifs</strong><br>
+            ILEPS, Cergy-Pontoise (95) | 2021 - Présent</p>
+            <p><strong>Baccalauréat STMG, Option Mercatique</strong><br>
+            Lycée Jules Ferry, Conflans-Sainte-Honorine (78) | 2021</p>

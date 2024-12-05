@@ -1,264 +1,108 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lopes Matheo">
-    <title>CV Lopes Matheo - Commercialisation de Produits et Services Sportifs</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Style général */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+/* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Conteneur principal */
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            border-radius: 10px;
-            margin-bottom: 40px;
-        }
+/* Container principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
+/* Navigation */
+nav {
+    background-color: #4CAF50;
+    padding: 10px 0;
+}
 
-        header p {
-            font-size: 1.1rem;
-        }
+nav .container {
+    display: flex;
+    justify-content: center;
+}
 
-        /* Section À propos */
-        #a-propos {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+nav .nav-link {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
-        #a-propos h2 {
-            font-size: 1.8rem;
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
+nav .nav-link:hover {
+    text-decoration: underline;
+}
 
-        #a-propos p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
+/* Section d'accueil */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
 
-        /* Section Compétences */
-        #competences {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+header h1 {
+    font-size: 3rem;
+}
 
-        #competences h2 {
-            font-size: 1.8rem;
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
+header p {
+    font-size: 1.5rem;
+}
 
-        #competences ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+/* Section À propos */
+section {
+    padding: 40px 0;
+    background-color: white;
+    margin-bottom: 20px;
+}
 
-        #competences li {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
+h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
 
-        /* Section Projets */
-        #projets {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+ul {
+    list-style-type: none;
+}
 
-        #projets h2 {
-            font-size: 1.8rem;
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
+ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
 
-        #projets p {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
+/* Section Projets */
+.project {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 
-        #projets ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
 
-        #projets li {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
+.project p {
+    font-size: 1rem;
+}
 
-        /* Section Parcours Universitaire */
-        #parcours {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        #parcours h2 {
-            font-size: 1.8rem;
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
-
-        #parcours ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        #parcours li {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        /* Section Contact */
-        #contact {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-        }
-
-        #contact h2 {
-            font-size: 1.8rem;
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
-
-        #contact p {
-            font-size: 1rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            border-radius: 5px;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- En-tête -->
-    <header>
-        <div class="container">
-            <h1>Lopes Matheo</h1>
-            <p>Étudiant en Licence de Commercialisation de Produits et Services Sportifs | Passionné par le sport et la culture portugaise</p>
-        </div>
-    </header>
-
-    <!-- Section À propos -->
-    <section id="a-propos">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>Actuellement en troisième année de Licence en <strong>Commercialisation des Produits et Services Sportifs</strong> à l'ILEPS de Cergy-Pontoise, je suis passionné par l'univers du sport, du marketing et du commerce. Mon parcours académique m’a permis d'acquérir des compétences solides en stratégie de commercialisation et en gestion d’événements sportifs. J’ambitionne de participer à la mise en place de stratégies de vente et de communication pour des produits et services sportifs. Mon intérêt pour la Capoeira et la culture portugaise enrichit également mon parcours personnel, avec un fort ancrage dans ces deux domaines.</p>
-        </div>
-    </section>
-
-    <!-- Section Compétences -->
-    <section id="competences">
-        <div class="container">
-            <h2>Compétences</h2>
-            <ul>
-                <li><strong>Langues :</strong> Français (natif), Portugais (courant), Espagnol (intermédiaire), Anglais (intermédiaire).</li>
-                <li><strong>Bureautique :</strong> Maîtrise de Word, PowerPoint, Excel, Google Drive.</li>
-                <li><strong>Commercialisation et Marketing :</strong> Compétences en stratégie marketing, analyse du marché et gestion de la relation client.</li>
-                <li><strong>Vente et Négociation :</strong> Expérience dans la vente, l’animation commerciale et la gestion de points de vente.</li>
-                <li><strong>Gestion d’Événements :</strong> Organisation d’événements sportifs, gestion de la logistique et communication autour des projets.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projets">
-        <div class="container">
-            <h2>Projets</h2>
-            <p><strong>Création d’une campagne marketing pour un produit sportif</strong></p>
-            <ul>
-                <li>Analyse du marché et des comportements des consommateurs pour un produit sportif spécifique.</li>
-                <li>Développement d'une stratégie de communication et marketing ciblée pour maximiser l'impact et la visibilité.</li>
-            </ul>
-
-            <p><strong>Organisation d'un événement sportif local</strong></p>
-            <ul>
-                <li>Planification, gestion et coordination d'un événement sportif pour une audience locale.</li>
-                <li>Recrutement de partenaires, gestion des inscriptions et suivi de l'événement en temps réel.</li>
-            </ul>
-
-            <p><strong>Développement de stratégies commerciales pour des produits sportifs</strong></p>
-            <ul>
-                <li>Conception de supports de vente, analyse de la performance et amélioration continue des processus commerciaux.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Section Parcours Universitaire -->
-    <section id="parcours">
-        <div class="container">
-            <h2>Parcours Universitaire</h2>
-            <p><strong>Licence en Commercialisation de Produits et Services Sportifs (3 ans)</strong></p>
-            <p><em>ILEPS, Cergy-Pontoise (95) | 2021 - Présent</em></p>
-            <ul>
-                <li>Formation en stratégie marketing, gestion commerciale et événementielle dans le domaine sportif.</li>
-                <li>Projets pratiques sur la vente et la gestion d'événements sportifs, développement de compétences en communication et marketing.</li>
-            </ul>
-
-            <p><strong>Baccalauréat STMG, Option Mercatique</strong></p>
-            <p><em>Lycée Jules Ferry, Conflans-Sainte-Honorine (78) | 2021</em></p>
-            <ul>
-                <li>Formation en marketing, gestion et mercatique, avec un focus sur la relation client et la stratégie commerciale.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Vous pouvez me contacter par email pour toute question ou opportunité professionnelle :</p>
-            <ul>
-                <li><strong>Email :</strong> matheo.lopes@gmail.com</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Lopes Matheo | Commercialisation de Produits et Services Sportifs</p>
-    </footer>
-</body>
-</html>
-
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

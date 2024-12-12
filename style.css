@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    overflow-x: hidden; /* Empêcher le débordement horizontal */
 }
 
 /* Style de la navigation */
@@ -29,6 +30,7 @@ nav {
     padding: 10px 20px;
     margin-right: 20px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -45,6 +47,9 @@ header {
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards;
 }
 
 header .photo-container {
@@ -76,10 +81,23 @@ header p {
     border-radius: 5px;
     text-decoration: none;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #0056b3;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Style des sections avec des bulles */
@@ -90,44 +108,56 @@ section {
     border-radius: 50px; /* Bordure arrondie comme une bulle */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSection 1s forwards;
 }
 
+/* Déclencher l'animation lors du survol */
 section:hover {
     transform: translateY(-10px); /* Soulever la section lors du survol */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre pour un effet de profondeur */
 }
 
-/* Style des titres de section */
-section h2 {
-    color: #007BFF;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    text-align: center;
+/* Animation fade-in des sections */
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Style des listes dans les sections */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-/* Style des projets */
+/* Animation des projets */
 .project {
     background-color: #f9f9f9;
     padding: 15px;
     border-radius: 50px; /* Bordure arrondie pour chaque projet */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInProject 1s forwards;
 }
 
 .project h3 {
     font-size: 1.5rem;
     color: #333;
+}
+
+/* Animation fade-in pour les projets */
+@keyframes fadeInProject {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Formulaire de contact */
@@ -152,11 +182,12 @@ form button {
     border: none;
     border-radius: 50px; /* Bordure arrondie pour le bouton */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
     background-color: #0056b3;
+    transform: scale(1.05); /* Agrandir légèrement le bouton au survol */
 }
 
 /* Style du pied de page */
@@ -171,3 +202,26 @@ footer p {
     margin: 0;
 }
 
+/* Effet de défilement pour les éléments visibles */
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation du texte d'introduction */
+@keyframes textIntro {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de l'introduction */
+header h1, header p {
+    animation: textIntro 1.5s ease-out forwards;
+}

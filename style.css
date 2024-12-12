@@ -225,3 +225,20 @@ section.in-view {
 header h1, header p {
     animation: textIntro 1.5s ease-out forwards;
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+
+    // Fonction pour vérifier si l'élément est visible dans la fenêtre
+    function checkVisibility() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                section.classList.add('in-view');
+            }
+        });
+    }
+
+    // Vérifier au chargement de la page et à chaque défilement
+    checkVisibility();
+    window.addEventListener('scroll', checkVisibility);
+});

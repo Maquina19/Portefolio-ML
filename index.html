@@ -1,73 +1,52 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lopes Matheo">
-    <title>Portfolio - Lopes Matheo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#about" class="nav-link">À propos</a>
-            <a href="#competences" class="nav-link">Compétences</a>
-            <a href="#projets" class="nav-link">Projets</a>
-            <a href="#parcours" class="nav-link">Parcours</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-    </nav>
+/* Ajoutez ceci dans votre fichier style.css */
 
-    <!-- Section d'accueil -->
-    <header id="accueil">
-        <div class="container">
-            <h1>Lopes Matheo</h1>
-            <p>Étudiant en Licence de Commercialisation des Produits et Services Sportifs</p>
-        </div>
-    </header>
+/* Style du conteneur de la photo */
+.photo-container {
+    display: inline-block;
+    width: 100px; /* Taille de la photo */
+    height: 100px;
+    margin-right: 20px; /* Espacement entre la photo et le texte */
+}
 
-    <!-- Section À propos -->
-    <section id="about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>Actuellement en troisième année de Licence en Commercialisation des Produits et Services Sportifs à l'ILEPS de Cergy-Pontoise, je suis passionné par le sport, la culture portugaise et le marketing sportif. Mon objectif est de développer des stratégies commerciales efficaces dans l’industrie du sport et de contribuer à la croissance des entreprises dans ce secteur.</p>
-        </div>
-    </section>
+/* Style de l'image */
+.photo {
+    width: 100%; /* S'adapte à la taille du conteneur */
+    height: 100%;
+    border-radius: 50%; /* Pour rendre l'image circulaire */
+    object-fit: cover; /* Assure que l'image ne soit pas déformée */
+}
 
-    <!-- Section Compétences -->
-    <section id="competences">
-        <div class="container">
-            <h2>Compétences</h2>
-            <ul>
-                <li><strong>Langues :</strong> Français (natif), Portugais (courant), Espagnol (intermédiaire), Anglais (intermédiaire)</li>
-                <li><strong>Compétences bureautiques :</strong> Maîtrise de Word, Excel, PowerPoint, Google Drive</li>
-                <li><strong>Commercialisation et marketing :</strong> Stratégie marketing, gestion de la relation client, analyse de marché</li>
-                <li><strong>Vente :</strong> Conseiller de vente, gestion des stocks, animation commerciale</li>
-            </ul>
-        </div>
-    </section>
+/* Style du header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
 
-    <!-- Section Projets -->
-    <section id="projets">
-        <div class="container">
-            <h2>Projets</h2>
-            <div class="project">
-                <h3>Campagne marketing pour un produit sportif</h3>
-                <p>Analyse du marché, création de supports publicitaires et développement d'une stratégie de communication efficace pour un produit sportif ciblé.</p>
-            </div>
-            <div class="project">
-                <h3>Organisation d'un événement sportif local</h3>
-                <p>Coordination des aspects logistiques et communication pour organiser un événement sportif destiné à un public local.</p>
-            </div>
-        </div>
-    </section>
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
-    <!-- Section Parcours -->
-    <section id="parcours">
-        <div class="container">
-            <h2>Parcours Universitaire</h2>
-            <p><strong>Licence en Commercialisation des Produits et Services Sportifs</strong><br>
-            ILEPS, Cergy-Pontoise (95) | 2021 - Présent</p>
-            <p><strong>Baccalauréat STMG, Option Mercatique</strong><br>
-            Lycée Jules Ferry, Conflans-Sainte-Honorine (78) | 2021</p>
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Style du bouton CTA */
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}

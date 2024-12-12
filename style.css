@@ -1,76 +1,170 @@
-/* Style de base */
-* {
+/* Style de base pour le corps */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-/* Mise en page */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+/* Style de la navigation */
+nav {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* En-tête */
-header {
-    background-color:  #B0B0B0 ;
+/* Liens de navigation */
+.nav-link {
     color: white;
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Style pour l'en-tête */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+}
+
+header .photo-container {
+    margin-right: 20px;
+}
+
+header .photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 header p {
     font-size: 1.2rem;
+    margin-top: 10px;
 }
 
-/* Sections */
-section {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    border: 2px solid #B0B0B0; /* Bordure gris clair */
-}
-
-
-
-section h2 {
-    font-size: 2rem;
-    color: #87CEEB;
-    margin-bottom: 15px;
-}
-
-section p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #87CEEB
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF;
     color: white;
-    border-radius: 10px;
-    margin-top: 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style des sections avec des bulles */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style des titres de section */
+section h2 {
+    color: #007BFF;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Style des listes dans les sections */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Style des projets */
+.project {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Formulaire de contact */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Style du pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 footer p {
-    font-size: 1rem;
+    margin: 0;
 }

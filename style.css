@@ -85,23 +85,24 @@ header p {
 /* Style des sections avec des bulles */
 section {
     background-color: #ffffff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 50px; /* Bordure arrondie comme une bulle */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Soulever la section lors du survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre pour un effet de profondeur */
 }
 
 /* Style des titres de section */
 section h2 {
     color: #007BFF;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 /* Style des listes dans les sections */
@@ -112,14 +113,14 @@ ul {
 
 ul li {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 /* Style des projets */
 .project {
     background-color: #f9f9f9;
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 50px; /* Bordure arrondie pour chaque projet */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 15px;
 }
@@ -149,8 +150,9 @@ form button {
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px; /* Bordure arrondie pour le bouton */
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
@@ -168,3 +170,4 @@ footer {
 footer p {
     margin: 0;
 }
+

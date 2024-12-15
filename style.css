@@ -1,10 +1,11 @@
 /* Déclaration des couleurs et variables */
 :root {
-    --primary-color: #333333;
-    --hover-color: #555555;
-    --background-color: #1a1a1a;
-    --shadow-color: rgba(255, 255, 255, 0.1);
-    --text-color: #ffffff;
+    --primary-color: #0056b3; /* Bleu professionnel */
+    --hover-color: #003d80; /* Bleu plus foncé pour le survol */
+    --background-color: #f4f4f9; /* Gris très clair pour l'arrière-plan */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --text-color: #333333; /* Gris foncé pour le texte */
+    --accent-color: #ff9800; /* Orange pour les accents */
 }
 
 /* Style de la navigation */
@@ -25,31 +26,20 @@ nav {
     margin: 0 auto;
 }
 
-/* Image en haut à gauche */
-.image-top-left {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
 /* Liens de navigation */
 .nav-link {
-    color: var(--text-color);
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 20px;
     margin-right: 20px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajout d'une transition pour le transform */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
     background-color: var(--hover-color);
     border-radius: 5px;
-    transform: scale(1.05); /* Effet de zoom au survol */
+    transform: scale(1.05);
 }
 
 /* Style pour l'en-tête */
@@ -66,22 +56,29 @@ header {
     animation: fadeIn 1s forwards;
 }
 
-header .photo-container {
-    margin-right: 20px;
+/* Conteneur pour la photo */
+.photo-container {
+    text-align: center; /* Centre la photo */
+    margin-bottom: 20px; /* Espace sous la photo */
 }
 
-header .photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Rendre l'image ronde */
-    object-fit: cover; /* Ajuste l'image pour ne pas déformer */
+.photo {
+    width: 150px; /* Taille de la photo */
+    height: 150px; /* Hauteur */
+    border-radius: 50%; /* Rend la photo ronde */
+    object-fit: cover; /* Ajuste l'image sans déformer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre pour un effet moderne */
+}
+
+header .photo-container {
+    margin-right: 20px;
 }
 
 /* Titres et texte */
 header h1 {
     font-size: 2.5rem;
     margin: 0;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 header p {
@@ -102,10 +99,11 @@ header p {
     }
 }
 
+/* Bouton d'appel à l'action */
 .cta-button {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--accent-color);
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -119,11 +117,11 @@ header p {
 
 /* Style des sections */
 section {
-    background-color: var(--background-color);
+    background-color: #ffffff;
     padding: 30px;
     margin: 20px auto;
-    border-radius: 50px;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
@@ -131,7 +129,6 @@ section {
     will-change: opacity, transform;
 }
 
-/* Animation pour faire apparaître les sections */
 @keyframes fadeInSection {
     0% {
         opacity: 0;
@@ -143,19 +140,18 @@ section {
     }
 }
 
-/* Effet sur survol des sections */
 section:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-    background-color: #262626; /* Légère variation de couleur au survol */
+    box-shadow: 0 8px 16px var(--shadow-color);
+    background-color: var(--background-color);
 }
 
 /* Style pour les projets */
 .project {
-    background-color: #262626;
+    background-color: #ffffff;
     padding: 15px;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px var(--shadow-color);
     margin-bottom: 15px;
     opacity: 0;
     transform: translateY(30px);
@@ -164,10 +160,9 @@ section:hover {
 
 .project h3 {
     font-size: 1.5rem;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
-/* Animation pour les projets */
 @keyframes fadeInProject {
     0% {
         opacity: 0;
@@ -181,8 +176,8 @@ section:hover {
 
 /* Style du pied de page */
 footer {
-    background-color: #000000;
-    color: var(--text-color);
+    background-color: var(--primary-color);
+    color: #ffffff;
     padding: 10px;
     text-align: center;
 }
@@ -198,7 +193,7 @@ footer p {
     }
 
     header h1 {
-        font-size: 2rem; /* Réduire la taille du titre sur petits écrans */
+        font-size: 2rem;
     }
 
     header p {
@@ -210,7 +205,6 @@ footer p {
         font-size: 0.9rem;
     }
 
-    /* Réduire la taille des photos sur petits écrans */
     header .photo {
         width: 80px;
         height: 80px;
@@ -219,11 +213,7 @@ footer p {
 
 /* Style spécifique pour la section Expériences professionnelles */
 #experiences {
-    background-color: #262626;
+    background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
-
-
-
-

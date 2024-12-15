@@ -1,17 +1,17 @@
 /* Déclaration des couleurs et variables */
 :root {
-    --primary-color: #0056b3; /* Bleu professionnel */
-    --hover-color: #003d80; /* Bleu plus foncé pour le survol */
-    --background-color: #f4f4f9; /* Gris très clair pour l'arrière-plan */
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --text-color: #333333; /* Gris foncé pour le texte */
-    --accent-color: #ff9800; /* Orange pour les accents */
+    --primary-color: #1E88E5; /* Bleu vif */
+    --hover-color: #1565C0; /* Bleu plus sombre */
+    --background-color: #F5F5F5; /* Gris clair pour le fond */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Ombre légère */
+    --text-color: #FFFFFF; /* Blanc pour le texte */
+    --accent-color: #FF7043; /* Orange pour les boutons et accents */
 }
 
 /* Style de la navigation */
 nav {
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: #FFFFFF;
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -26,9 +26,20 @@ nav {
     margin: 0 auto;
 }
 
+/* Image en haut à gauche */
+.image-top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
 /* Liens de navigation */
 .nav-link {
-    color: #ffffff;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 10px 20px;
     margin-right: 20px;
@@ -56,22 +67,17 @@ header {
     animation: fadeIn 1s forwards;
 }
 
-/* Conteneur pour la photo */
-.photo-container {
-    text-align: center; /* Centre la photo */
-    margin-bottom: 20px; /* Espace sous la photo */
-}
-
-.photo {
-    width: 150px; /* Taille de la photo */
-    height: 150px; /* Hauteur */
-    border-radius: 50%; /* Rend la photo ronde */
-    object-fit: cover; /* Ajuste l'image sans déformer */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre pour un effet moderne */
-}
-
 header .photo-container {
     margin-right: 20px;
+    text-align: center;
+}
+
+header .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 /* Titres et texte */
@@ -99,11 +105,10 @@ header p {
     }
 }
 
-/* Bouton d'appel à l'action */
 .cta-button {
     display: inline-block;
     background-color: var(--accent-color);
-    color: #ffffff;
+    color: #FFFFFF;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -112,15 +117,15 @@ header p {
 }
 
 .cta-button:hover {
-    background-color: var(--hover-color);
+    background-color: #FF5722;
 }
 
 /* Style des sections */
 section {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 30px;
     margin: 20px auto;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     opacity: 0;
@@ -129,6 +134,7 @@ section {
     will-change: opacity, transform;
 }
 
+/* Animation pour faire apparaître les sections */
 @keyframes fadeInSection {
     0% {
         opacity: 0;
@@ -140,17 +146,17 @@ section {
     }
 }
 
+/* Effet sur survol des sections */
 section:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px var(--shadow-color);
-    background-color: var(--background-color);
 }
 
 /* Style pour les projets */
 .project {
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
     margin-bottom: 15px;
     opacity: 0;
@@ -163,6 +169,7 @@ section:hover {
     color: var(--primary-color);
 }
 
+/* Animation pour les projets */
 @keyframes fadeInProject {
     0% {
         opacity: 0;
@@ -177,7 +184,7 @@ section:hover {
 /* Style du pied de page */
 footer {
     background-color: var(--primary-color);
-    color: #ffffff;
+    color: #FFFFFF;
     padding: 10px;
     text-align: center;
 }
@@ -211,9 +218,3 @@ footer p {
     }
 }
 
-/* Style spécifique pour la section Expériences professionnelles */
-#experiences {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px var(--shadow-color);
-}

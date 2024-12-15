@@ -1,3 +1,7 @@
+/* Définition de la police globale */
+* {
+    font-family: "Times New Roman", Times, serif;
+}
 /* Déclaration des couleurs et variables */
 :root {
     --primary-color: #1E88E5; /* Bleu vif */
